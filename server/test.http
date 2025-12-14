@@ -1,0 +1,72 @@
+# Effettua il login
+POST http://localhost:3001/api/sessions
+content-type: application/json
+
+{
+  "username": "mario.rossi@email.it",
+  "password": "mario.rossi"
+}
+###
+
+# Verifica la sessione corrente
+GET http://localhost:3001/api/sessions/current
+###
+
+# Ottieni tutti gli obiettivi
+GET http://localhost:3001/api/goals
+###
+
+# Ottieni gli obiettivi di uno specifico utente (richiede autenticazione)
+GET http://localhost:3001/api/goals/4
+###
+
+# Ottieni le statistiche di uno specifico utente (richiede autenticazione)
+GET http://localhost:3001/api/stats/4
+###
+
+# Aggiungi una nuova partita e verifica gli obiettivi (richiede autenticazione)
+POST http://localhost:3001/api/game
+content-type: application/json
+
+{
+  "difficulty": 2,
+  "attemptsHistory": [10, 20, 15, 12],
+  "targetNumber": 12,
+  "date": "2024-01-15",
+  "userId": 4,
+  "status": "won"
+}
+###
+
+# Effettua il logout
+DELETE http://localhost:3001/api/sessions/current
+###
+
+# Verifica se l'utente è ancora loggato
+GET http://localhost:3001/api/sessions/current
+###
+
+
+
+# Invio di un payload di test al webhook Zapier (richiede nessuna autenticazione)
+POST https://hooks.zapier.com/hooks/catch/23609361/ubepo2w/
+Content-Type: application/json
+
+{
+  "timestamp": "2025-07-01T15:30:00.000Z",
+  "sessionId": "TEST-123",
+  "deviceModel": "PC Editor",
+  "deviceType": "Desktop",
+  "operatingSystem": "Windows 11",
+  "gpuName": "RTX 3060",
+  "gpuMemMB": 12288,
+  "cpuType": "Intel Core i7",
+  "cpuCores": 8,
+  "frameTimeMs": 16.67,
+  "fps": 60,
+  "cpuMemMB": 2048,
+  "instanceCount": 123
+}
+###
+
+

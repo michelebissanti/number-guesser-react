@@ -1,0 +1,77 @@
+.hover-lift {
+    transition: transform 0.2s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+:root {
+    --bs-primary: #6366f1;
+    /* Il tuo colore primario */
+    --bs-primary-rgb: 99, 102, 241;
+    /* Lo stesso colore in RGB */
+
+    --bs-body-bg: #f8f9fa;
+    /* Colore di sfondo del sito */
+    --bs-body-color: #1f2937;
+    /* Colore del testo principale */
+
+    /* Puoi personalizzare anche altre variabili */
+    --bs-secondary: #4b5563;
+    --bs-success: #10b981;
+    --bs-info: #3b82f6;
+    --bs-warning: #f59e0b;
+    --bs-danger: #ef4444;
+}
+
+/* Assicurati che i colori funzionino anche negli stati hover */
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: #4f46e5;
+    /* Versione più scura per hover */
+    --bs-btn-hover-border-color: #4f46e5;
+    --bs-btn-active-bg: #4338ca;
+    --bs-btn-active-border-color: #4338ca;
+}
+
+/* Stili per outline primary */
+.btn-outline-primary {
+    --bs-btn-color: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-active-bg: #4338ca;
+    --bs-btn-active-border-color: #4338ca;
+    --bs-btn-active-color: #fff;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.border-primary {
+    border-color: var(--bs-primary) !important;
+}
+
+/* Stili per focus outline */
+.btn-primary:focus,
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Aggiungi stili per il tema generale */
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}

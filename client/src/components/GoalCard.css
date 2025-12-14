@@ -1,0 +1,56 @@
+.achievement-card {
+    border: none;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.achievement-card:hover {
+    transform: translateY(-2px);
+}
+
+.achieved-goal-card {
+    background: linear-gradient(to right bottom, #ffffff, #f8f9ff);
+    border-left: 4px solid #0d6efd;
+}
+
+.achievement-icon {
+    width: 60px;
+    /* Increased from 40px */
+    height: 60px;
+    /* Increased from 40px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tracking-wider {
+    letter-spacing: 0.05em;
+}
+
+/* Enhanced shimmer effect for achieved cards */
+.achieved-goal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right,
+            transparent 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 100%);
+    transform: translateX(-100%);
+    animation: shimmer 2.5s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* New styles for achievement banner */
+.achievement-banner {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.1) 0%, rgba(25, 135, 84, 0.05) 100%);
+    box-shadow: 0 2px 4px rgba(25, 135, 84, 0.1);
+}
